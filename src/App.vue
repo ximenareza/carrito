@@ -16,7 +16,7 @@
     {{ header }}
   </h1>
   <ul>
-    <li v-for="item in items" :key="item.id"> 🛍️ {{ item.label }} </li>
+    <li v-for="item in items" :key="item.id"> 💡 {{ item.label }} </li>
   </ul>
 </template>
 
