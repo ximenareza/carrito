@@ -27,7 +27,7 @@
     <input type="radio"  value="high" v-model="newItemPriority">
     Alta
   </label>
-  {{ newItemPriority == 'low' ? '🥶' : '🥵' }}
+  {{ newItemPriority == 'low' ? '🧊' : '🔥' }}
 
   <ul>
     <li v-for="item in items" :key="item.id"> 💡 {{ item.label }} </li>
