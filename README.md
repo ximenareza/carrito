@@ -9,4 +9,4 @@ Desarrollo de apps en dispositivos móviles
 
 ## Autor
 
-Ivan Rivalcoba 🐦‍🔥
+Ximena Reza 🐦‍🔥
