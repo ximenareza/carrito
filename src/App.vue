@@ -37,6 +37,11 @@ const activateEdition = (activate) => {
 <button v-if="editing" class="btn" @click="activateEdition(false)"> Cancelar</button>
 <button v-else class="btn btn-primary" @click="activateEdition(true)">Agregar Articulo</button>
 </div>
+
+
+<a v-bind:href=" 'https://' + newItem" target="_blank" > {{newItem == ""  ? "🛒 Link" : newItem}} </a>
+
+
 <form
 class="add-item form"
    v-if="editing"
@@ -52,6 +57,7 @@ class="add-item form"
   <button class="btn btn-primary">
     Salvar Articulo
   </button>
+  
   </form>
   <ul></ul>
   
