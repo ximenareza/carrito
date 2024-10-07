@@ -39,7 +39,9 @@ const activateEdition = (activate) => {
 </div>
 
 
-<a v-bind:href=" 'https://' + newItem" target="_blank" > {{newItem == ""  ? "🛒 Link" : newItem}} </a>
+<a v-bind:href="newItem == '' ? 'https://www.google.com' : 'https://' + newItem" target="_blank">
+  {{ newItem == "" ? "🛒 Link" : newItem }}
+</a>
 
 
 <form
