@@ -61,8 +61,7 @@ class="add-item form"
   
   </form>
   <ul></ul>
-  
-  <!-- Lista -->
+  <!-- Lista  como objetos-->
   <ul>
     <li 
     v-for="{label, id, purchased, priority} in items" 
@@ -72,6 +71,18 @@ class="add-item form"
     {{priority ? "🔥"  : "🛒"}} {{ label }}
     </li>
   </ul>
+
+  <!-- Lista como arreglos-->
+  <ul>
+    <li 
+    v-for="{label, id, purchased, priority} in items" 
+    :key="id"
+    :class="[purchased ? 'strikeout': '', priority ? 'priority': '']"
+    class="amazing">
+    {{priority ? "🔥"  : "🛒"}} {{ label }}
+  </li>
+  </ul>
+
   <p v-if="items.length === 0">🥀 NO HAY ELEMENTOS EN LA LISTA 🥀 </p>
 </template>
  
