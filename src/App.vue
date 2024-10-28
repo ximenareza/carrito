@@ -72,6 +72,6 @@ const togglePurchased = (item) => {
 
 <style scoped>
 .shopping-cart-icon {
-  font-size: 2rem; /* Adjust the font-size value as per your desired size */
+  font-size: 2rem; 
 }
 </style>
