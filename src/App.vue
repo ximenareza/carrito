@@ -1,5 +1,6 @@
 <script setup>
-import { ref } from 'vue';
+import { ref, computed } from "vue";
+
 // Modo edición
 const editing = ref(false);
 // Funcion que alterna el valor de la variable editing
@@ -31,10 +32,17 @@ const saveItem = () => {
   newItem.value = "";
   newItemHighPriority.value = false;
 };
+
 // Alternando estado de compra del item
 const togglePurchased = (item) => {
   item.purchased = !item.purchased;
 };
+
+// Creando una propiedad computada
+const characterCount = computed(()=>{
+  // Toda propiedad computada debe regresar un valor
+  return newItem.value.length;
+});
 </script>
 
 <template>
@@ -57,7 +65,13 @@ const togglePurchased = (item) => {
       class="btn btn-primary">
       Salvar Articulo
     </button>
-  </form>
+   
+	<!-- Contador -->
+  <p class="counter">
+    {{ characterCount }} / 200
+  </p>
+	
+</form>
   <!-- Lista -->
   <ul>
     <li v-for="({ id, label, purchased, highPriority }, index) in items" 
