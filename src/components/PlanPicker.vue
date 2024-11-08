@@ -1,5 +1,5 @@
 <script setup>
-import planItem from './PlanPickerItem.vue';
+import PlanPickerItem from './PlanPickerItem.vue';
 import {ref} from 'vue';
 const plans = ref (['El cafetero', 'Amigo', 'El lechero']);
 
@@ -9,7 +9,7 @@ const plans = ref (['El cafetero', 'Amigo', 'El lechero']);
 <template>
 
     <div class="plans">
-      <plan-item v-for="plan in plans" :key="plan" :name="plan"> </plan-item>         
+      <PlanPickerItem v-for="plan in plans" :key="plan" :name="plan"> </PlanPickerItem>         
     </div>   
 
 </template>
