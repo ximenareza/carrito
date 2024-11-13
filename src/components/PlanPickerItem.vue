@@ -30,7 +30,7 @@
     selected.value = true;
   
   //Emitir evento de que el plan ha sido seleccionado
-  emit('select, props.name');
+  emit('select', props.name);
 };
 
   
