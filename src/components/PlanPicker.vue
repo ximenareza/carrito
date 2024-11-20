@@ -21,13 +21,10 @@ const selectPlan = (name) => {
          :key="plan" 
          :name="plan"
          @select="selectPlan"
-         :select-plan="selectedPlan" />       
+         :selectPlan="selectedPlan" />       
     </div>   
 
 </template>
-
-  <p> {{ selectedPlan }} </p>
-
 
 
 <style scoped>
