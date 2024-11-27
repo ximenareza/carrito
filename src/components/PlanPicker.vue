@@ -7,15 +7,17 @@ const plans = ref (['El cafetero', 'Amigo', 'El lechero']);
 const selectPlan = (name) => {
   //Almacenar el plan seleccionado
   selectedPlan.value = name;
+  };
 
-};
+  //Almacena el plan seleccionado
+const plansWrapper = ref(null);
 //Intentando obtener la referencia al elemento .plans 
 console.log('Termina de ejecutar el scrit setup 🥳');
 
 //Registrando el hook mounted
 onMounted (() => {
   console.log("El componente PlanPicker se ha montado 🎉");
-  console.log(document.querySelector('.plans'));
+  console.log(plansWrapper.value);
 });
 
 </script>
@@ -23,7 +25,7 @@ onMounted (() => {
 
 <template>
 
-    <div class="plans">
+    <div ref = "plansWrapper" class="plans">
       <PlanPickerItem 
          v-for="plan in plans" 
          :key="plan" 
